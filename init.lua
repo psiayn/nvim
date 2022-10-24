@@ -10,6 +10,7 @@ autocmd Filetype lua,javascript,typescript setlocal tabstop=2 shiftwidth=2 softt
 set splitbelow
 set splitright
 autocmd BufNewFile,BufRead *.spr set syntax=scheme
+colorscheme doubletrouble
 ]]
 
 require("plugins")

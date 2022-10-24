@@ -31,13 +31,13 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+  vim.keymap.set('n', '<space>bf', vim.lsp.buf.formatting, bufopts)
 end
 
 -- Register a handler that will be called for all installed servers.
 lsp_installer.on_server_ready(function(server)
     local opts = {
-        capabilities = require('cmp_nvim_lsp').update_capabilities(
+        capabilities = require('cmp_nvim_lsp').default_capabilities(
             vim.lsp.protocol.make_client_capabilities()
         ),
         on_attach = on_attach,
