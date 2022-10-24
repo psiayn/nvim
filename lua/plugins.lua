@@ -10,7 +10,7 @@ return require('packer').startup(function()
     'glepnir/zephyr-nvim',
     requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
   })
-  use "muchzill4/doubletrouble"
+  use 'tiagovla/tokyodark.nvim'
   use {'ojroques/nvim-hardline'}
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
