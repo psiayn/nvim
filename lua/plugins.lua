@@ -11,6 +11,7 @@ return require('packer').startup(function()
     requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
   })
   use 'tiagovla/tokyodark.nvim'
+  use 'morhetz/gruvbox'
   use {'ojroques/nvim-hardline'}
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
