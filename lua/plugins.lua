@@ -10,8 +10,7 @@ return require('packer').startup(function()
     'glepnir/zephyr-nvim',
     requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
   })
-  use 'tiagovla/tokyodark.nvim'
-  use 'morhetz/gruvbox'
+  use 'cocopon/iceberg.vim'
   use {'ojroques/nvim-hardline'}
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -29,7 +28,7 @@ return require('packer').startup(function()
       config = function()
           local saga = require("lspsaga")
 
-          saga.init_lsp_saga({
+          saga.setup({
               -- your configuration
           })
       end,
@@ -56,8 +55,4 @@ return require('packer').startup(function()
   use 'rafamadriz/friendly-snippets'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
-
-  use {
-      'rmagatti/auto-session'
-  }
 end)

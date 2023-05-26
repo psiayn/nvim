@@ -11,9 +11,8 @@ autocmd Filetype lua,javascript,typescript setlocal tabstop=2 shiftwidth=2 softt
 set splitbelow
 set splitright
 autocmd BufNewFile,BufRead *.spr set syntax=scheme
-let g:gruvbox_italics=1
 set termguicolors
-colorscheme gruvbox
+colorscheme iceberg
 ]]
 
 require("plugins")
