@@ -6,12 +6,13 @@
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  use({
-    'glepnir/zephyr-nvim',
-    requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
-  })
   use 'cocopon/iceberg.vim'
+  use 'sainnhe/everforest'
   use {'ojroques/nvim-hardline'}
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
@@ -21,18 +22,6 @@ return require('packer').startup(function()
       run = ':TSUpdate'
   }
   use 'b3nj5m1n/kommentary'
-
-  use({
-      "glepnir/lspsaga.nvim",
-      branch = "main",
-      config = function()
-          local saga = require("lspsaga")
-
-          saga.setup({
-              -- your configuration
-          })
-      end,
-  })
   use {
       "williamboman/nvim-lsp-installer",
       "neovim/nvim-lspconfig",
@@ -55,4 +44,8 @@ return require('packer').startup(function()
   use 'rafamadriz/friendly-snippets'
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
+  use {
+    'davisdude/vim-love-docs',
+    branch = 'build'
+  }
 end)
