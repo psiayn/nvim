@@ -13,7 +13,9 @@ return {
       "hrsh7th/cmp-cmdline",
       "hrsh7th/nvim-cmp",
       "hrsh7th/cmp-vsnip",
-      "onsails/lspkind.nvim"
+      "onsails/lspkind.nvim",
+      "petertriho/cmp-git",
+      "andersevenrud/cmp-tmux"
     },
     opts = {
       -- options for vim.diagnostic.config()
