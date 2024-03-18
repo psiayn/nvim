@@ -88,6 +88,9 @@ return {
             require("lspconfig")[server_name].setup(opts)
         end,
       }
+      require("lspconfig").rust_analyzer.setup{}
+      require("lspconfig").pyright.setup{}
+      require("lspconfig").gopls.setup{}
     end
   },
 

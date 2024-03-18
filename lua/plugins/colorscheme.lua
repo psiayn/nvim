@@ -1,19 +1,15 @@
 return {
   {
-    "sainnhe/everforest",
+    "zootedb0t/citruszest.nvim",
     lazy = false,
     priority = 1000,
     config = function()
 	    vim.cmd([[
-	    	if has('termguicolors')
+	  if has('termguicolors')
 			set termguicolors
 		endif
-		set background=dark
-		let g:everforest_background = 'soft'
-		
-		let g:everforest_vetter_performance = 1
 
-		colorscheme everforest
+		colorscheme citruszest
 	    ]])
     end
   }
