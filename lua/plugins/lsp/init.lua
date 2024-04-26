@@ -18,6 +18,8 @@ return {
       require("lspconfig").rust_analyzer.setup{}
       require("lspconfig").pyright.setup{}
       require("lspconfig").gopls.setup{}
+      require("lspconfig").svelte.setup{}
+      require("lspconfig").tsserver.setup{}
 
     vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
