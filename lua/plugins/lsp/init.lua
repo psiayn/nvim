@@ -58,5 +58,10 @@ return {
     })
     end
   },
-
+  {
+    'leafOfTree/vim-svelte-plugin',
+    config = function()
+      vim.cmd([[let g:vim_svelte_plugin_load_full_syntax = 1]])
+    end
+  },
 }
