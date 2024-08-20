@@ -16,7 +16,13 @@ return {
     },
     config = function()
       require("lspconfig").rust_analyzer.setup{}
-      require("lspconfig").pyright.setup{}
+      require("lspconfig").basedpyright.setup({
+        settings = {
+          basedpyright = {
+            typeCheckingMode = "standard"
+          }
+        }
+      })
       require("lspconfig").gopls.setup{}
       require("lspconfig").svelte.setup{}
       require("lspconfig").tsserver.setup{}
@@ -51,7 +57,7 @@ return {
         vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
         vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-        vim.keymap.set('n', '<space>f', function()
+        vim.keymap.set('n', '<space>bf', function()
           vim.lsp.buf.format { async = true }
         end, opts)
       end,
