@@ -1,6 +1,6 @@
 return {
   {
-    "EdenEast/nightfox.nvim",
+    "nyoom-engineering/oxocarbon.nvim",
     lazy = false,
     priority = 1000,
     config = function()
@@ -8,7 +8,7 @@ return {
           if has('termguicolors')
             set termguicolors
           endif
-          colorscheme nordfox
+          colorscheme oxocarbon
 	    ]])
     end
   }
